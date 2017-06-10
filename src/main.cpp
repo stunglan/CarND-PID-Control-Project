@@ -114,7 +114,10 @@ int main()
 //  lenght 600
   
   
-  double K[3] = {8.35383,4.13947e-05,1.02281};
+//  double K[3] = {8.35383,4.13947e-05,1.02281};
+  
+//  Manuallt decrese the D controllerxs
+  double K[3] = {8.35383,4.13947e-05,0.702281};
   pid.Init(K[0], K[1], K[2]);
   
   Twiddle twiddle = Twiddle(K[0], K[1], K[2]);
@@ -163,7 +166,7 @@ int main()
 //          std::cout << "CTE: " << cte << " Calc Steering: " << steer_value << " Sensor angle: " << angle << " Sensor speed: " << speed << std::endl;
 
           //
-          // twiddle_mode -- implement twiddle 
+          // twiddle_mode -- implement twiddle
           if (twiddle.mode) {
             
             
